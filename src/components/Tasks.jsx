@@ -3,13 +3,17 @@
 
 import { useTask } from "../context/TaskContext";
 import { toast } from "react-toastify";
+import { MdDeleteOutline } from "react-icons/md";
+
 
 const Tasks = () => {
   const { task, deleteTask } = useTask();
 
   return (
     <ul className="bg-gray-600 p-2 m-4 mt-10 border-white border-[1px]">
-        <h2 className="text-3xl text-white text-center">Your Tasks</h2>
+        <h2 className="text-3xl text-white text-center">Your Tasks
+
+        </h2>
       {task.map((task) => (
         <li
           key={task.id}
@@ -25,9 +29,9 @@ const Tasks = () => {
                 deleteTask(task.id)
                toast.info("Task deleted!");
             }}
-            className="text-white hover:text-red-700 transition"
+            className="text-white hover:text-red-700 transition flex justify-center items-center gap-2"
           >
-            Delete Task
+             <MdDeleteOutline /> Delete Task
           </button>
         </li>
       ))}
