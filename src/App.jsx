@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
-    <div className="h-screen bg-slate-800">
+    <div className="h-full bg-slate-800">
       <ToastContainer
         position="top-center"
         autoClose={2000}
